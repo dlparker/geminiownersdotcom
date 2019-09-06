@@ -1,38 +1,41 @@
 {% extends "base.html" %}
+{% block extrahead %}
+{% endblock %}
 
 {% block body %}
 <div class="jumbotron">
   <div class="container">
-    <h1>Welcome to Cactus!</h1>
-    <p>Get started with this template based on HTML 5 Boilerplate. Go ahead, explore!</p>
+    <h1>Welcome to geminiowners.com</h1>
+    <p>This is a collection of information links for owners of Gemini Catamarans</p>
   </div>
 </div>
+<div class="view" style="background-image: url({% static '/images/DW_stbd_bow_gal_bay_1.jpg' %}); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
+    <div class="container with-background">
+        <!-- Example row of columns -->
+        <div class="row">
+
+            <div class="col-lg-6 text-white">
+                <h2>Owners Groups</h2>
+                <ul>
+                    <li class="text-white"><h3>Groups.io</h3> <a href="https://geminicatamarans.groups.io/g/main"> https://geminicatamarans.groups.io/g/main</a> - Restricted access for owners and selected others. Provides a messaging function with email integration and good search tools, a collaborative wiki, storage for photos and files with good search tools. Started in 2019 by some of the same owners that use other groups.</li>
+                    <li><h3>Yahoo! Groups</h3> <a href="https://groups.yahoo.com/neo/groups/Gemini_Cats/info">https://groups.yahoo.com/neo/groups/Gemini_Cats/info</a> - Restricted access for owners and selected others. Provides a messaging function with email integration, a collaborative wiki, storage for photos and files. Older but functional technology that has been in use since 2001 and has about 90000 messages posted over that period.</li>
+                    <li><h3>Facebook</h3> - Restricted access for owners (and selected others?). Found by logging in to Facebook and searching for the group. I can't find a way to link to the group without being logged into Facebook, so you'll have to find it yourself. Started in 2013 by some of the owners from the Yahoo! group</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</div>
 <div class="container">
-  <!-- Example row of columns -->
-  <div class="row">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Holden Geminis</h2>
+            <p>You might have gotten here searching for one of these cars, as it seems that their owners are fond of them. Try this search on Google: "holden gemini owners" </p>
 
-    <div class="col-lg-3">
-      <h2>Full featured template engine</h2>
-      <p>Cactus uses and extends Django's templating engine. If you've built sites using Django before, you'll feel right at home.</p>
+        </div>
     </div>
-
-    <div class="col-lg-3">
-      <h2>Pretty URLs</h2>
-      <p>Cactus can prettify URLs, so you can turn <code>/about.html</code> into a fancier <code>/about/</code>.</p>
-    </div>
-
-    <div class="col-lg-3">
-      <h2>Minification & Fingerprinting</h2>
-      <p>For maximum performance, Cactus can minify and fingerprint your static assets. As for your pages, Cactus will automatically compress them.</p>
-   </div>
-
-    <div class="col-lg-3">
-      <h2>And much more</h2>
-      <p>There's of course a lot more you can do with Cactus. Plus, Cactus's plugin framework lets you easily extend its functionality.</p>
-   </div>
-
-
-  </div>
 </div>
 {% endblock %}
