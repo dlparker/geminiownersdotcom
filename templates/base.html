@@ -60,19 +60,27 @@
 
     {% block body %}
     {% endblock %}
-
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+    <script src="{% static '/static/js/vendor/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static '/static/js/vendor/popper.min.js' %}"></script>
     <script src="{% static '/static/js/vendor/bootstrap.min.js' %}"></script>
     <script src="{% static '/static/js/main.js' %}"></script>
     <script>
      $(document).ready(function() {
-         var html = $.ajax('https://www.geminicatamarans.com');
-         console.log(html);
+         var request = {
+             url: 'https://data.geminiowners.com/data.txt',
+             type: "GET",
+             contentType: "text",
+             success: function(response) {
+                 console.log(response);
+             },
+             error: function(xhr, status, error) {
+                 console.error(xhr);
+                 console.error(error);
+             }
+         }
+         $.ajax(request);
      });
+
     </script>
   </body>
 
