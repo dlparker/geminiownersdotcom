@@ -66,19 +66,42 @@
     <script src="{% static '/static/js/main.js' %}"></script>
     <script>
      $(document).ready(function() {
-         var request = {
-             url: 'https://data.geminiowners.com/data.txt',
-             type: "GET",
-             contentType: "text",
-             success: function(response) {
-                 console.log(response);
-             },
-             error: function(xhr, status, error) {
-                 console.error(xhr);
-                 console.error(error);
+         function tick(fname) {
+             var request = {
+                 url: 'https://data.geminiowners.com/' + fname,
+                 type: "GET",
+                 contentType: "text",
+                 success: function(response) {
+                     console.log(response);
+                 },
+                 error: function(xhr, status, error) {
+                     console.error(xhr);
+                     console.error(error);
+                 }
              }
+             $.ajax(request);
          }
-         $.ajax(request);
+         tick('view.txt');
+         $('#groupsio_link').on('click', function(event) {
+             tick('to_groupsio.txt');
+         });
+         $('#facebook_link').on('click', function(event) {
+             tick('to_facebook.txt');
+         });
+         $('#yahoo_link').on('click', function(event) {
+             tick('to_yahoo.txt');
+         });
+         $('#boatgalley_link').on('click', function(event) {
+             tick('to_boatgalley.txt');
+         });
+         $('#gemcats_link').on('click', function(event) {
+             tick('to_gemcats.txt');
+         });
+         $('#cruisersforum_link').on('click', function(event) {
+             tick('to_cruisersforum.txt');
+         });
+
+
      });
 
     </script>
